@@ -45,17 +45,16 @@
     {% endif %}
 	</head>
 	<body id="top">
-  {% if no_filter == 0 %}
 
 	<div class="wrapper">
 		<!-- Header -->
-		<header id="header">
-			<a href="#nav">Filter</a>
+		<header id="header" {% if no_filter == 1 %} style="display:none"{% endif %}>
+      {% if no_filter == 0 %}<a href="#nav">Filter</a>{% endif %}
 			<h1><a href="#">Pokémon Go Map</a></h1>
 		</header>
 
 		<!-- Nav -->
-		<nav id="nav">
+		<nav id="nav" {% if no_filter == 1 %} style="display:none"{% endif %}>
 			<p>Filter through Pokémon, Gyms &amp; Pokéstops.</p>
 			<div class="form-control">
 				<label for="next-location">
@@ -128,9 +127,7 @@
 			<!-- <button id="trigger-overlay">Test overlay</button> -->
 		</nav>
 
-  {% endif %}
-
-		<div id="map"{% if no_filter == 1 %} style="top: 0"{% endif %}></div>
+    <div id="map"{% if no_filter == 1 %} style="top: 0"{% endif %}></div>
 
 		<div class="overlay overlay-contentscale">
 			<button type="button" class="overlay-close">Close</button>
