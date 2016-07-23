@@ -45,6 +45,7 @@
     {% endif %}
 	</head>
 	<body id="top">
+  {% if no_filter == 0 %}
 
 	<div class="wrapper">
 		<!-- Header -->
@@ -127,7 +128,9 @@
 			<!-- <button id="trigger-overlay">Test overlay</button> -->
 		</nav>
 
-		<div id="map"></div>
+  {% endif %}
+
+		<div id="map"{% if no_filter == 1 %} style="top: 0"{% endif %}></div>
 
 		<div class="overlay overlay-contentscale">
 			<button type="button" class="overlay-close">Close</button>

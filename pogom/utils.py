@@ -58,6 +58,7 @@ def get_args():
     parser.add_argument('-D', '--db', help='Database filename', default='pogom.db')
     parser.add_argument('-t', '--threads', help='Number of search threads', required=False, type=int, default=5, dest='num_threads')
     parser.add_argument('-ga', '--googleanalytics', help='The google analytics code', required=False, default='', type=str)
+    parser.add_argument('-nf', '--nofiltering', help='Disables the filtering menu', required=False, default=0, type=int)
     parser.set_defaults(DEBUG=False)
     args = parser.parse_args()
 

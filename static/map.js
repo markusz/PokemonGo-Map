@@ -497,7 +497,10 @@ function updateMap() {
 window.setInterval(updateMap, 5000);
 updateMap();
 
-document.getElementById('gyms-switch').onclick = function() {
+var gymsSwitch = document.getElementById('gyms-switch');
+
+if(gymsSwitch) {
+gymsSwitch.onclick = function() {
     localStorage["showGyms"] = this.checked;
     if (this.checked) {
         updateMap();
@@ -508,6 +511,7 @@ document.getElementById('gyms-switch').onclick = function() {
         map_gyms = {}
     }
 };
+}
 
 $('#pokemon-switch').change(function() {
     localStorage["showPokemon"] = this.checked;

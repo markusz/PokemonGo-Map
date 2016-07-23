@@ -59,6 +59,7 @@ if __name__ == '__main__':
     config['LOCALE'] = args.locale
     config['CHINA'] = args.china
     config['GA_CODE'] = args.googleanalytics
+    config['NO_FILTER'] = args.nofiltering
 
     if not args.mock:
         start_locator_thread(args)
