@@ -70,7 +70,6 @@ if __name__ == '__main__':
     config['LOCALE'] = args.locale
     config['CHINA'] = args.china
     config['GA_CODE'] = args.googleanalytics
-    config['NO_FILTER'] = args.nofiltering
 
     if not args.only_server:
         create_search_threads(args.num_threads)
