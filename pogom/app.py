@@ -40,8 +40,7 @@ class Pogom(Flask):
                                gmaps_key=config['GMAPS_KEY'],
                                lang=config['LOCALE'],
                                is_fixed=display,
-                               ga_code=config['GA_CODE'],
-                               no_filter=config['NO_FILTER'])
+                               ga_code=config['GA_CODE'])
 
     def raw_data(self):
         d = {}
