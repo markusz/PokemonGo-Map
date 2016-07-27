@@ -53,6 +53,7 @@ def get_args():
     parser.add_argument('-D', '--db', help='Database filename', default='pogom.db')
     parser.add_argument('-t', '--num-threads', help='Number of search threads', type=int, default=1)
     parser.add_argument('-ga', '--googleanalytics', help='The google analytics code', required=False, default='', type=str)
+    parser.add_argument('-cn', '--custom-navbar', help='Enable the custom navbar for private projects and display the provided text as header', required=False, default='', type=str)
     parser.add_argument('-np', '--no-pokemon', help='Disables Pokemon from the map (including parsing them into local db)', action='store_true', default=False)
     parser.add_argument('-ng', '--no-gyms', help='Disables Gyms from the map (including parsing them into local db)', action='store_true', default=False)
     parser.add_argument('-nk', '--no-pokestops', help='Disables PokeStops from the map (including parsing them into local db)', action='store_true', default=False)

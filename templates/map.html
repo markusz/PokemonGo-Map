@@ -32,6 +32,7 @@
 
 		<link rel="stylesheet" href="static/dist/css/app.min.css">
 		<script src="static/js/vendor/modernizr.custom.js"></script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
     {% if  ga_code|length > 0 %}
       <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -51,7 +52,16 @@
 		<!-- Header -->
 		<header id="header">
 			<a href="#nav">Options</a>
+      {% if  custom_navbar|length > 0 %}
+        <a style="border-left: #5a5a5a"></a>
+        <h1><a href="#">{{ custom_navbar }}</a></h1>
+        <span style="float: right; margin-right: 15px;  padding-top: 4px;">
+          <span style="vertical-align: middle"><a class="github-button" href="https://github.com/markusz" aria-label="Follow @markusz on GitHub">Follow @markusz</a></span>
+        </span>
+        <a style="font-size: medium; margin-left: 10px; float: right;" href="mailto:pokemunich@markusziller.de">Contact me</a>
+      {% else %}
 			<h1><a href="#">Pokémon Go Map</a></h1>
+      {% endif %}
 		</header>
 
 		<!-- NAV -->
